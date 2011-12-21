@@ -1,0 +1,2 @@
+# Visual Basic 6.0 only supports CRLF line endings
+autocrlf = true
