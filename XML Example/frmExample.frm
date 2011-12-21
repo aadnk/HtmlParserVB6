@@ -90,7 +90,7 @@ Private Sub ProcessData(sData As String)
         Set nameNodes = employeeNode.GetElementsByTagName("name")
         
         If nameNodes.Lenght > 0 Then
-            lstCustomers.AddItem nameNodes.Item(0).NodeValue
+            lstCustomers.AddItem nameNodes.Item(0).TextContent
         End If
     Next
 

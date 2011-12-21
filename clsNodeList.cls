@@ -94,7 +94,7 @@ End Function
 Public Function Item(ByVal Index As Long) As clsElement
 Attribute Item.VB_Description = "Returns the indexth item in the collection."
 
-    If Index >= 0 And Index <= Lenght Then
+    If Index >= 0 And Index < Lenght Then
         ' Return the node
         Set Item = pMain.GetElementByIndex(Nodes(Index))
     End If
@@ -105,7 +105,7 @@ Public Property Get Lenght() As Long
 Attribute Lenght.VB_Description = "The number of nodes in the list."
 
     ' Return the amout of nodes in this list
-    Lenght = UBound(Nodes)
+    Lenght = UBound(Nodes) + 1
 
 End Property
 

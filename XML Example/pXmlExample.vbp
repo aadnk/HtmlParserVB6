@@ -1,9 +1,10 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{A47EFE08-C940-499A-B43E-8C71BA451278}#31.0#0#..\HTMLParser.dll#HTMLParser
+Reference=*\G{A47EFE08-C940-499A-B43E-8C71BA451278}#33.0#0#..\HTMLParser.dll#HTMLParser
 Form=frmExample.frm
 UserControl=Downloader.ctl
 Startup="frmExample"
+ExeName32="pXmlExample.exe"
 Command32=""
 Name="pXmlExample"
 HelpContextID="0"
