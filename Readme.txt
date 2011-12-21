@@ -6,6 +6,13 @@ This is a simple DOM-compliant (version 1) parser for HTML- and XML-files, writt
 Licenced under LGPL 2.1.
 
 
+PROBLEMS WITH ZIP
+
+If you experience problems with opening the files in the ZIP, please download and install GIT
+and clone this public repository (with CORE.AUTOCRLF set to TRUE). This means setting "Checkout 
+Windows-style, commit Unix-style line endings" in the installer.
+
+
 INSTRUCTIONS FOR USING THIS LIBRARY
 
  1. To embed the parser into your project completely, add pHTMLParser.vbp to your project 
