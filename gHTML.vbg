@@ -1,0 +1,3 @@
+VBGROUP 5.0
+Project=pHTMLParser.vbp
+StartupProject=DOM Inspector\pHTML.vbp

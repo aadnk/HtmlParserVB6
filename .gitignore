@@ -1,0 +1,10 @@
+# Compiled Metadata
+*.exp
+*.lib
+
+# Compiled Dynamic libraries
+*.dll
+*.ocx
+
+# Executables
+*.dll

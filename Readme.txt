@@ -1,0 +1,21 @@
+=== HTML/XML PARSER FOR VB6 ===
+
+DESCRIPTION
+
+This is a simple DOM-compliant (version 1) parser for HTML- and XML-files, written in VB6. 
+Licenced under GPL 2.1.
+
+
+INSTRUCTIONS FOR USING THIS LIBRARY
+
+ 1. To embed the parser into your project completely, add pHTMLParser.vbp to your project 
+    (File -> Add Project .. -> Existing).
+ 2. OR, to compile the parser as a seperate DLL-file, compile pHTMLParser and include it in
+    the installation process of your program.
+ 3. Add the file Entities.dat to the same directory as your program or the DLL-file.
+ 4. Execute "Install.bat" for the user if the DLL-file is stored in a different directory.
+
+
+DEMO PROGRAM
+
+ To just test the capabilities and speed of this parser, compile the demo project using gHTML.vbg

@@ -1,0 +1,10 @@
+ÿ<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Hallo</title>
+</head>
+<body>
+	<p>Hallo verden</p>
+	<img src="halloen" alt='dette skal da være et bilde' pos=12 "fatt"="hah" />
+</body>
+</html>

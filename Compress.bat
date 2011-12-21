@@ -1,0 +1,3 @@
+echo Compressing DLL-file ...
+upx -9 HTMLParser.dll
+pause

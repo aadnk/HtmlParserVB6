@@ -1,0 +1,2 @@
+regsvr32 HTMLParser.dll
+pause
