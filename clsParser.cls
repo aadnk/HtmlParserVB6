@@ -63,7 +63,7 @@ Attribute Parse.VB_Description = "Parse an XML document from a resource identifi
     Set Document = Implementation.CreateDocument("", "", Nothing)
     
     ' Parse the document
-    ParseText Document, objInput.StringData, 1, 0
+    ParseTextInternal Document, objInput.StringData, 1, 0
     
     ' Return the document
     Set Parse = Document
@@ -88,7 +88,18 @@ Friend Sub InitializeArray(intChar() As Integer, SafeArray As SAFEARRAY1D, sRefS
 
 End Sub
 
-Friend Sub ParseText(Document As clsDocument, sText As String, lngIndex As Long, lngParent As Long)
+Public Function ParseText(sText As String) As clsDocument
+
+    Dim clsInput As New clsLSInput
+    
+    ' Simplify some code
+    clsInput.StringData = sText
+    
+    Set ParseText = Parse(clsInput)
+
+End Function
+
+Friend Sub ParseTextInternal(Document As clsDocument, sText As String, lngIndex As Long, lngParent As Long)
 
     Dim SafeArray As SAFEARRAY1D, intChar() As Integer, lngExit As Long
 
@@ -181,7 +192,7 @@ Attribute ParseWithContext.VB_Description = "Parse an XML fragment from a resour
             End If
         
             ' Add all parsed elements as children
-            ParseText ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.NodeIndex
+            ParseTextInternal ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.NodeIndex
         
         Case Action_Replace
         
@@ -189,12 +200,12 @@ Attribute ParseWithContext.VB_Description = "Parse an XML fragment from a resour
             ContextArg.ParentNode.RemoveAllChildren
             
             ' Add new nodes
-            ParseText ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.ParentNode.NodeIndex
+            ParseTextInternal ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.ParentNode.NodeIndex
         
         Case Action_InsertAfter
         
             ' Add all parsed elements after this element
-            ParseText ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.ParentNode.NodeIndex
+            ParseTextInternal ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.ParentNode.NodeIndex
 
         Case Action_InsertBefore
         
@@ -233,7 +244,7 @@ Attribute ParseWithContext.VB_Description = "Parse an XML fragment from a resour
                     Elements(lngIndex).ChildCount = Tell
                     
                     ' Append elements
-                    ParseText ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.ParentNode.NodeIndex
+                    ParseTextInternal ContextArg.OwnerDocument, objInput.StringData, 1, ContextArg.ParentNode.NodeIndex
 
                     ' And add all in the temp array
                     For Temp = LBound(aTemp) To UBound(aTemp)
