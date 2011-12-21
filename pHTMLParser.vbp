@@ -1,5 +1,5 @@
 Type=OleDll
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINDOWS\system32\stdole2.tlb#OLE Automation
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Reference=*\G{D619B2A0-9868-11D3-879A-204C4F4F5020}#1.0#0#IEnumv.tlb#VB friendly redefinition of IEnumVARIANT
 Class=clsStringBuilder; clsStringBuilder.cls
 Module=modDeclarations; modDeclarations.bas

@@ -3,7 +3,7 @@
 DESCRIPTION
 
 This is a simple DOM-compliant (version 1) parser for HTML- and XML-files, written in VB6. 
-Licenced under GPL 2.1.
+Licenced under LGPL 2.1.
 
 
 INSTRUCTIONS FOR USING THIS LIBRARY

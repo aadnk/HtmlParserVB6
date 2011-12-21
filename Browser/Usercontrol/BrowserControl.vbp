@@ -1,5 +1,5 @@
 Type=Control
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINDOWS\system32\stdole2.tlb#OLE Automation
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Reference=*\G{A47EFE08-C940-499A-B43E-8C71BA451278}#2b.0#0#..\..\HTMLParser.dll#HTMLParser
 UserControl=usrBrowser.ctl
 Class=clsRender; clsRender.cls
