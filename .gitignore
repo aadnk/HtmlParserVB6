@@ -7,4 +7,5 @@
 *.ocx
 
 # Executables
-*.dll
+*.exe
+
