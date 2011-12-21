@@ -19,3 +19,24 @@ INSTRUCTIONS FOR USING THIS LIBRARY
 DEMO PROGRAM
 
  To just test the capabilities and speed of this parser, compile the demo project using gHTML.vbg
+
+
+TROUBLESHOOTING
+
+ Problem: 
+	Unable to run pHTML.exe. 
+ Error message: 
+	"You do not have an appropriate license to use this functionality"
+ Resolution:
+	The library (HTMLParser.dll) is not registered. Please execute "Install.bat" in the same folder.
+
+ 
+ Problem:
+ 	Library is not registered when "Install.bat" is run.
+ Error messages:
+	The module "HTMLParser.dll" was loaded but the call to DllRegisterServer failed 
+		with error code 0x80004005.		
+	The module "BrowserControl.ocx" was loaded but the call to DllRegisterServer failed 
+		with error code 0x80004005.
+ Resolution:
+	Execute the "Install.bat" as administrator (right-click and choose "Run as Administrator").
