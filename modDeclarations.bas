@@ -19,7 +19,7 @@ Option Explicit
 ' Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 ' API-calls used primarily to access/manipulate strings faster
-Declare Function VarPtrArray Lib "msvbvm50.dll" Alias "VarPtr" (Ptr() As Any) As Long
+Declare Function VarPtrArray Lib "msvbvm60.dll" Alias "VarPtr" (Ptr() As Any) As Long
 Declare Function SysAllocStringByteLen Lib "oleaut32" (ByVal lpString As Long, ByVal lLen As Long) As String
 Declare Function SHCreateDirectoryEx Lib "shell32" Alias "SHCreateDirectoryExA" (ByVal hwnd As Long, ByVal pszPath As String, ByVal psa As Any) As Long
 Declare Sub ZeroMemory Lib "kernel32" Alias "RtlZeroMemory" (pDst As Any, ByVal ByteLen As Long)

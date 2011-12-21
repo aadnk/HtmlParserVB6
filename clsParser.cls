@@ -564,6 +564,9 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
                     ' Add all properties of this tag, if there are some
                     If intChar(Temp) = SpaceChar Then
                     
+                        ' Reset state from last iteration
+                        bExitLoop = False
+                    
                         ' Start searching after the space character
                         lngSearch = Temp + 1
                     
