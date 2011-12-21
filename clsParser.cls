@@ -377,6 +377,7 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
     Dim lngPropIndex As Long, lngSearch As Long, Temp As Long, lngAmout As Long, intNextChar As Integer
     Dim lngBegin As Long, bExitLoop As Boolean, sEndTag As String, lngPointer As Long, sName As String
     Dim lngType As NodeType, aPropName As Variant, ElementCount As Long, bCDATASection As Boolean
+    Dim hasEndTag As Boolean
 
     ' The begin-index is at first the same as the start index
     lngBegin = lngIndex
@@ -525,6 +526,9 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
                             lngType = DOMEntity
                         
                         End If
+                        
+                        ' Don't search for a end tag - mark it "already found"
+                        hasEndTag = True
                     
                         ' Next, we need to find out where we should read the doctype's name
                         lngNextSpace = FindValue(Tell + 1, UBound(intChar), SpaceChar, intChar)
@@ -536,6 +540,7 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
                     
                         ' This is a processing instruction
                         lngType = DOMProcessingInstruction
+                        hasEndTag = True
                         
                         ' We need to move one step further (because of the question mark)
                         Tell = Tell + 1
@@ -544,6 +549,7 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
                     
                         ' If not, this is a regular element
                         lngType = DOMElement
+                        hasEndTag = False
                     
                     End If
             
@@ -559,7 +565,8 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
                     End If
                           
                     ' Add the element
-                    ElementCount = Document.AppendElement(ProcessSegment(intChar, Tell + 1, Temp, True), Tell, lngParent, lngType, False)
+                    ElementCount = Document.AppendElement(ProcessSegment(intChar, Tell + 1, Temp, True), _
+                      Tell, lngParent, lngType, hasEndTag)
                     
                     ' Add all properties of this tag, if there are some
                     If intChar(Temp) = SpaceChar Then
@@ -668,7 +675,7 @@ Private Function HTMLTagProc(ByVal lngIndex As Long, ByVal lngParent As Long, in
                     ' See if we should ignore this element
                     If Not FilterElement(Document, ElementCount, False) Then
     
-                    ' Is this element already closed
+                        ' Is this element already closed
                         If Elements(ElementCount).EndTag Then
                         
                             ' We'll just move further
