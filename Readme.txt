@@ -10,7 +10,19 @@ PROBLEMS WITH ZIP
 
 If you experience problems with opening the files in the ZIP, please download and install GIT
 and clone this public repository (with CORE.AUTOCRLF set to TRUE). This means setting "Checkout 
-Windows-style, commit Unix-style line endings" in the installer.
+Windows-style, commit Unix-style line endings" in the installer:
+
+You can also set this setting manually in git bash:
+
+	git config --global core.autocrlf true 
+
+To clone (copy) this repository into a local directory, execute the following:
+
+	git clone git://github.com/aadnk/HtmlParserVB6.git "[PATH TO YOUR NEW DIRECTORY]"
+
+Or, if you just want it stored in your documents folder:
+
+	git clone git://github.com/aadnk/HtmlParserVB6.git "C:\Users\[your user name]\Documents\HtmlParserVB6"
 
 
 INSTRUCTIONS FOR USING THIS LIBRARY
