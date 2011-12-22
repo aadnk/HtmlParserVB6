@@ -9,12 +9,7 @@ Licenced under LGPL 2.1.
 PROBLEMS WITH ZIP
 
 If you experience problems with opening the files in the ZIP, please download and install GIT
-and clone this public repository (with CORE.AUTOCRLF set to TRUE). This means setting "Checkout 
-Windows-style, commit Unix-style line endings" in the installer:
-
-You can also set this setting manually in git bash:
-
-	git config --global core.autocrlf true 
+and clone this public repository.
 
 To clone (copy) this repository into a local directory, execute the following:
 

@@ -21,4 +21,17 @@
 *.tlb -text
 *.vbg eol=crlf
 *.vbw eol=crlf
+*.scc eol=crlf
 # *.vbz
+
+# CUSTOM FILE TYPES
+*.dat eol=crlf
+
+# Windows Bash
+*.bat eol=crlf
+
+# Just in case
+*.manifest eol=crlf
+
+# Looks better on Windows
+*.txt eol=crlf
