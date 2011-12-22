@@ -1,0 +1,24 @@
+# Visual Basic 6.0 only supports CRLF line endings
+*.bas eol=crlf
+*.cls eol=crlf
+*.ctl eol=crlf
+*.ctx -text
+*.dca eol=crlf
+*.ddf eol=crlf
+*.dep eol=crlf
+*.dob eol=crlf
+*.dox -text
+*.dsr eol=crlf
+*.dsx -text
+*.dws eol=crlf
+*.frm eol=crlf
+*.frx -text
+*.log eol=crlf
+*.oca eol=crlf
+*.pag eol=crlf
+*.pgx -text
+*.res -text
+*.tlb -text
+*.vbg eol=crlf
+*.vbw eol=crlf
+# *.vbz

@@ -2,12 +2,18 @@
 *.exp
 *.lib
 
+# Compile results
+*.log
+
 # Compiled Dynamic libraries
 *.dll
 *.ocx
+*.vbd
+*.wct
 
 # Executables
 *.exe
 
 # Output
 Binary/
+
